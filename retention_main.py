@@ -13,9 +13,10 @@ class FirebaseInfoFetcher:
             self.user_retention_data = self.getUserRetentionData()
             if funnel == True:
                 self.user_funnel_data = self.getuserFunnelData()
-        self.total_downloaded_user_num : int = self.getTotalDownloadNum()
-        self.activated_user_num :int = self.getActivatedUserNum()
-        self.chat_num = self.getAllChatNum()
+        else:
+            self.total_downloaded_user_num : int = self.getTotalDownloadNum()
+            self.activated_user_num :int = self.getActivatedUserNum()
+            self.chat_num = self.getAllChatNum()
 
 
     def getUserRetentionData(self) -> dict:
