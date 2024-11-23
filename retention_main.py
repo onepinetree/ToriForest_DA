@@ -6,7 +6,7 @@ class FirebaseInfoFetcher:
 
     def __init__(self, other = False, funnel = False):
         if not firebase_admin._apps:
-            cred = credentials.Certificate("/etc/secrets/dotori-fd1b0-firebase-adminsdk-zzxxd-fb0e07e05e.json")
+            cred = credentials.Certificate("etc/secrets/dotori-fd1b0-firebase-adminsdk-zzxxd-fb0e07e05e.json")
             firebase_admin.initialize_app(cred)
         self.db = firestore.client()
         if other == False:
@@ -519,5 +519,6 @@ class GraphPloter:
         # 각 단계의 비율 출력 (선택 사항)
         # for stage, percentage, label in zip(stages, percentages, stage_labels):
         #     print(f"Stage {stage} ({label}): {percentage:.2f}% users passed")
+
 
 
