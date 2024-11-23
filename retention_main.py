@@ -6,7 +6,7 @@ class FirebaseInfoFetcher:
 
     def __init__(self, other = False, funnel = False):
         if not firebase_admin._apps:
-            cred = credentials.Certificate("retention_analysis/dotori-fd1b0-firebase-adminsdk-zzxxd-fb0e07e05e.json")
+            cred = credentials.Certificate("/etc/secrets/dotori-fd1b0-firebase-adminsdk-zzxxd-fb0e07e05e.json")
             firebase_admin.initialize_app(cred)
         self.db = firestore.client()
         if other == False:
