@@ -1,5 +1,5 @@
 import streamlit as st
-from retention_analysis.retention_main import GraphPloter, FirebaseInfoFetcher
+from retention_main import GraphPloter, FirebaseInfoFetcher
 
 st.title('토리숲 Growth Analysis 🐿️ 📊')
 st.write('')
